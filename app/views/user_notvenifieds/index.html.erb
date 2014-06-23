@@ -1,0 +1,57 @@
+<h1>Listing user_notvenifieds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Uuid</th>
+      <th>Birthday</th>
+      <th>Property</th>
+      <th>Mobile</th>
+      <th>Sender</th>
+      <th>Mail</th>
+      <th>Department</th>
+      <th>Position</th>
+      <th>Area</th>
+      <th>Subjection</th>
+      <th>Tel</th>
+      <th>Fax</th>
+      <th>Im</th>
+      <th>Id card</th>
+      <th>Address</th>
+      <th>Postcode</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_notvenifieds.each do |user_notvenified| %>
+      <tr>
+        <td><%= user_notvenified.name %></td>
+        <td><%= user_notvenified.uuid %></td>
+        <td><%= user_notvenified.birthday %></td>
+        <td><%= user_notvenified.property %></td>
+        <td><%= user_notvenified.mobile %></td>
+        <td><%= user_notvenified.sender %></td>
+        <td><%= user_notvenified.mail %></td>
+        <td><%= user_notvenified.department %></td>
+        <td><%= user_notvenified.position %></td>
+        <td><%= user_notvenified.area %></td>
+        <td><%= user_notvenified.subjection %></td>
+        <td><%= user_notvenified.tel %></td>
+        <td><%= user_notvenified.fax %></td>
+        <td><%= user_notvenified.im %></td>
+        <td><%= user_notvenified.id_card %></td>
+        <td><%= user_notvenified.address %></td>
+        <td><%= user_notvenified.postcode %></td>
+        <td><%= link_to 'Show', user_notvenified %></td>
+        <td><%= link_to 'Edit', edit_user_notvenified_path(user_notvenified) %></td>
+        <td><%= link_to 'Destroy', user_notvenified, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User notvenified', new_user_notvenified_path %>

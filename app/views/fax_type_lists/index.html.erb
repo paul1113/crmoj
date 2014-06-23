@@ -1,0 +1,27 @@
+<h1>Listing fax_type_lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Uuid</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fax_type_lists.each do |fax_type_list| %>
+      <tr>
+        <td><%= fax_type_list.uuid %></td>
+        <td><%= fax_type_list.name %></td>
+        <td><%= link_to 'Show', fax_type_list %></td>
+        <td><%= link_to 'Edit', edit_fax_type_list_path(fax_type_list) %></td>
+        <td><%= link_to 'Destroy', fax_type_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fax type list', new_fax_type_list_path %>

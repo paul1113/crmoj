@@ -1,0 +1,27 @@
+<h1>Listing im_type_lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Uuid</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @im_type_lists.each do |im_type_list| %>
+      <tr>
+        <td><%= im_type_list.uuid %></td>
+        <td><%= im_type_list.name %></td>
+        <td><%= link_to 'Show', im_type_list %></td>
+        <td><%= link_to 'Edit', edit_im_type_list_path(im_type_list) %></td>
+        <td><%= link_to 'Destroy', im_type_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Im type list', new_im_type_list_path %>

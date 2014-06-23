@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uuid:</strong>
+  <%= @phone.uuid %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @phone.type %>
+</p>
+
+<p>
+  <strong>National:</strong>
+  <%= @phone.national %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @phone.city %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @phone.number %>
+</p>
+
+<p>
+  <strong>Extension:</strong>
+  <%= @phone.extension %>
+</p>
+
+<%= link_to 'Edit', edit_phone_path(@phone) %> |
+<%= link_to 'Back', phones_path %>

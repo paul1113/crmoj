@@ -1,0 +1,27 @@
+<h1>Listing subjectionlists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Uuid</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subjectionlists.each do |subjectionlist| %>
+      <tr>
+        <td><%= subjectionlist.uuid %></td>
+        <td><%= subjectionlist.name %></td>
+        <td><%= link_to 'Show', subjectionlist %></td>
+        <td><%= link_to 'Edit', edit_subjectionlist_path(subjectionlist) %></td>
+        <td><%= link_to 'Destroy', subjectionlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subjectionlist', new_subjectionlist_path %>

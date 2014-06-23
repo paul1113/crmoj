@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uuid:</strong>
+  <%= @phone_type_list.uuid %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @phone_type_list.name %>
+</p>
+
+<%= link_to 'Edit', edit_phone_type_list_path(@phone_type_list) %> |
+<%= link_to 'Back', phone_type_lists_path %>

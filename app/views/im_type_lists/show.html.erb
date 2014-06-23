@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uuid:</strong>
+  <%= @im_type_list.uuid %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @im_type_list.name %>
+</p>
+
+<%= link_to 'Edit', edit_im_type_list_path(@im_type_list) %> |
+<%= link_to 'Back', im_type_lists_path %>

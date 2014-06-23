@@ -1,0 +1,31 @@
+<h1>Listing mobiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Uuid</th>
+      <th>Type</th>
+      <th>National</th>
+      <th>Number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mobiles.each do |mobile| %>
+      <tr>
+        <td><%= mobile.uuid %></td>
+        <td><%= mobile.type %></td>
+        <td><%= mobile.national %></td>
+        <td><%= mobile.number %></td>
+        <td><%= link_to 'Show', mobile %></td>
+        <td><%= link_to 'Edit', edit_mobile_path(mobile) %></td>
+        <td><%= link_to 'Destroy', mobile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mobile', new_mobile_path %>

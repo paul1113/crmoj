@@ -1,0 +1,27 @@
+<h1>Listing address_type_lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Uuid</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @address_type_lists.each do |address_type_list| %>
+      <tr>
+        <td><%= address_type_list.uuid %></td>
+        <td><%= address_type_list.name %></td>
+        <td><%= link_to 'Show', address_type_list %></td>
+        <td><%= link_to 'Edit', edit_address_type_list_path(address_type_list) %></td>
+        <td><%= link_to 'Destroy', address_type_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Address type list', new_address_type_list_path %>

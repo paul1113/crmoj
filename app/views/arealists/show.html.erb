@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uuid:</strong>
+  <%= @arealist.uuid %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @arealist.name %>
+</p>
+
+<%= link_to 'Edit', edit_arealist_path(@arealist) %> |
+<%= link_to 'Back', arealists_path %>

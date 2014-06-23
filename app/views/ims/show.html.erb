@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uuid:</strong>
+  <%= @im.uuid %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @im.type %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @im.number %>
+</p>
+
+<%= link_to 'Edit', edit_im_path(@im) %> |
+<%= link_to 'Back', ims_path %>

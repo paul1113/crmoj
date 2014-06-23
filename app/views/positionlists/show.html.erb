@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uuid:</strong>
+  <%= @positionlist.uuid %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @positionlist.name %>
+</p>
+
+<%= link_to 'Edit', edit_positionlist_path(@positionlist) %> |
+<%= link_to 'Back', positionlists_path %>

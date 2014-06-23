@@ -1,0 +1,27 @@
+<h1>Listing positionlists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Uuid</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @positionlists.each do |positionlist| %>
+      <tr>
+        <td><%= positionlist.uuid %></td>
+        <td><%= positionlist.name %></td>
+        <td><%= link_to 'Show', positionlist %></td>
+        <td><%= link_to 'Edit', edit_positionlist_path(positionlist) %></td>
+        <td><%= link_to 'Destroy', positionlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Positionlist', new_positionlist_path %>

@@ -1,0 +1,27 @@
+<h1>Listing arealists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Uuid</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @arealists.each do |arealist| %>
+      <tr>
+        <td><%= arealist.uuid %></td>
+        <td><%= arealist.name %></td>
+        <td><%= link_to 'Show', arealist %></td>
+        <td><%= link_to 'Edit', edit_arealist_path(arealist) %></td>
+        <td><%= link_to 'Destroy', arealist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Arealist', new_arealist_path %>

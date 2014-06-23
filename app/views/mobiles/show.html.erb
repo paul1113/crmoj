@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Uuid:</strong>
+  <%= @mobile.uuid %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @mobile.type %>
+</p>
+
+<p>
+  <strong>National:</strong>
+  <%= @mobile.national %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @mobile.number %>
+</p>
+
+<%= link_to 'Edit', edit_mobile_path(@mobile) %> |
+<%= link_to 'Back', mobiles_path %>

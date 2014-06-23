@@ -1,0 +1,27 @@
+<h1>Listing phone_type_lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Uuid</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @phone_type_lists.each do |phone_type_list| %>
+      <tr>
+        <td><%= phone_type_list.uuid %></td>
+        <td><%= phone_type_list.name %></td>
+        <td><%= link_to 'Show', phone_type_list %></td>
+        <td><%= link_to 'Edit', edit_phone_type_list_path(phone_type_list) %></td>
+        <td><%= link_to 'Destroy', phone_type_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Phone type list', new_phone_type_list_path %>

@@ -1,0 +1,25 @@
+<%= form_for(@mobile_type_list) do |f| %>
+  <% if @mobile_type_list.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mobile_type_list.errors.count, "error") %> prohibited this mobile_type_list from being saved:</h2>
+
+      <ul>
+      <% @mobile_type_list.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :uuid %><br>
+    <%= f.text_field :uuid %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
